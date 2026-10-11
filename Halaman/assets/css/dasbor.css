@@ -1,0 +1,345 @@
+/* Pengaturan Dasar & Variabel */
+:root {
+    --primary-color: #2c3e50;
+    --bg-color: #f4f7f6;
+    --border-color: #dcdcdc;
+    --text-main: #333333;
+    --text-muted: #777777;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 35px;
+    height: 35px;
+    background-color: #cccccc;
+    border-radius: 4px;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #cccccc;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.user-role {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.btn-logout {
+    padding: 6px 14px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #f0f0f0;
+}
+
+/* Kontainer Utama */
+.main-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Kotak Buat Laporan Baru */
+.create-report-card {
+    background-color: var(--card-bg);
+    border: 2px dashed #99c2ff;
+    border-radius: 6px;
+    padding: 35px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-report-card:hover {
+    background-color: #fafbfc;
+}
+
+.plus-icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--card-bg);
+    border: 2px solid var(--text-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto 12px auto;
+}
+
+.create-report-card h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--text-main);
+}
+
+.create-report-card p {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Bagian Riwayat Laporan */
+.history-section h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.table-responsive {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 13px;
+}
+
+.report-table th {
+    background-color: #e6e6e6;
+    color: var(--text-main);
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.report-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.report-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.report-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Badge Status */
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    background-color: #f9f9f9;
+}
+
+.status-diterima {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+.status-dijadwalkan {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.status-selesai {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+/* ===========================
+   STYLING MODAL / POP-UP
+   =========================== */
+.modal-overlay {
+    display: none; /* Sembunyikan secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Efek latar belakang gelap */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--text-main);
+}
+
+.modal-form {
+    padding: 20px 25px;
+}
+
+.modal-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.modal-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.modal-form .form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 13px;
+    outline: none;
+}
+
+.modal-form .form-control:focus {
+    border-color: #333333;
+}
+
+.textarea-control {
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn-cancel {
+    padding: 8px 18px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-submit {
+    padding: 8px 20px;
+    background-color: #333333;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #111111;
+}

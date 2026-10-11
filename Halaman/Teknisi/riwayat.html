@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknisi / Riwayat Seluruh Laporan - Servitory</title>
+    <!-- Menghubungkan CSS Utama dan CSS Khusus Riwayat -->
+    <link rel="stylesheet" href="../assets/css/teknisi.css">
+    <link rel="stylesheet" href="../assets/css/riwayat.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="logo-box">S</div>
+            <span class="brand-title">Servitory</span>
+        </div>
+        <div class="nav-user">
+            <div class="user-avatar"></div>
+            <div class="user-info">
+                <span class="user-name">Nama Teknisi</span>
+                <span class="user-role">Teknisi</span>
+            </div>
+            <button class="btn-logout" onclick="window.location.href='../login.html'">Log Out</button>
+        </div>
+    </header>
+
+    <!-- Sub-Navbar / Tabs -->
+    <nav class="sub-nav">
+        <div class="sub-nav-container">
+            <a href="dasbor.html" class="tab-item">Dasbor</a>
+            <a href="riwayat.html" class="tab-item active">Riwayat Seluruh Laporan</a>
+        </div>
+    </nav>
+
+    <!-- Konten Utama Riwayat Laporan -->
+    <main class="main-container">
+        
+        <div class="page-header-row">
+            <h2>Riwayat Seluruh Laporan</h2>
+            <button class="btn-ekspor">📥 Ekspor</button>
+        </div>
+
+        <!-- Filter Card -->
+        <div class="filter-card">
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <label>Pencarian</label>
+                    <input type="text" class="filter-input" placeholder="Nomor tiket / kata kunci...">
+                </div>
+                <div class="filter-group">
+                    <label>Status</label>
+                    <select class="filter-input">
+                        <option>Semua Status</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Jenis Masalah</label>
+                    <select class="filter-input">
+                        <option>Semua Jenis</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Ruang</label>
+                    <select class="filter-input">
+                        <option>Semua Ruang</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Teknisi</label>
+                    <select class="filter-input">
+                        <option>Semua Teknisi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-bottom-row">
+                <div class="filter-group">
+                    <label>Rentang Waktu</label>
+                    <input type="text" class="filter-input" placeholder="DD/MM/YYYY - DD/MM/YYYY">
+                </div>
+                <div class="filter-group">
+                    <label>Urutkan</label>
+                    <select class="filter-input">
+                        <option>Terbaru</option>
+                    </select>
+                </div>
+                <button class="btn-reset">Reset</button>
+                <button class="btn-filter">Terapkan Filter</button>
+            </div>
+        </div>
+
+        <!-- Tabel Riwayat Laporan -->
+        <div class="table-responsive">
+            <table class="report-table">
+                <thead>
+                    <tr>
+                        <th>Nomor Tiket</th>
+                        <th>Pelapor</th>
+                        <th>Masalah</th>
+                        <th>Jenis</th>
+                        <th>Tanggal</th>
+                        <th>Lokasi</th>
+                        <th>Teknisi</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>TKT-0008</td>
+                        <td>Ari Budi</td>
+                        <td>Proyektor rusak</td>
+                        <td>Rusak</td>
+                        <td>18 Sep 2026</td>
+                        <td>LPR 1</td>
+                        <td>Budi S.</td>
+                        <td><span class="badge status-dijadwalkan">[Dijadwalkan]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0007</td>
+                        <td>Budi Cahyo</td>
+                        <td>AC bocor</td>
+                        <td>Rusak</td>
+                        <td>13 Sep 2026</td>
+                        <td>LKJ 3</td>
+                        <td>-</td>
+                        <td><span class="badge status-diterima">[Diterima]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0006</td>
+                        <td>Candra Dewi</td>
+                        <td>Kabel LAN hilang</td>
+                        <td>Hilang</td>
+                        <td>14 Sep 2026</td>
+                        <td>LAI</td>
+                        <td>-</td>
+                        <td><span class="badge status-diterima">[Diterima]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0005</td>
+                        <td>Destika Eka</td>
+                        <td>Proyektor tidak menyala</td>
+                        <td>Rusak</td>
+                        <td>14 Sep 2026</td>
+                        <td>RT 09</td>
+                        <td>-</td>
+                        <td><span class="badge status-diterima">[Diterima]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0004</td>
+                        <td>Evan Frans</td>
+                        <td>Mikrofon tidak berfungsi</td>
+                        <td>Rusak</td>
+                        <td>28 Agu 2026</td>
+                        <td>LKJ 2</td>
+                        <td>Andi P.</td>
+                        <td><span class="badge status-selesai">[Selesai]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0003</td>
+                        <td>Fahrul Gunawan</td>
+                        <td>Kabel HDMI hilang</td>
+                        <td>Hilang</td>
+                        <td>05 Sep 2026</td>
+                        <td>LKJ 1</td>
+                        <td>Andi P.</td>
+                        <td><span class="badge status-dijadwalkan">[Dijadwalkan]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0002</td>
+                        <td>Galang Husna</td>
+                        <td>AC tidak dingin</td>
+                        <td>Rusak</td>
+                        <td>10 Sep 2026</td>
+                        <td>LPR 2</td>
+                        <td>Budi S.</td>
+                        <td><span class="badge status-dijadwalkan">[Dijadwalkan]</span></td>
+                    </tr>
+                    <tr>
+                        <td>TKT-0001</td>
+                        <td>Hira Irwana</td>
+                        <td>Proyektor rusak</td>
+                        <td>Rusak</td>
+                        <td>12 Sep 2026</td>
+                        <td>RT 01</td>
+                        <td>Budi S.</td>
+                        <td><span class="badge status-selesai">[Selesai]</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Footer Pagination -->
+            <div class="table-footer">
+                <span>Menampilkan 1-8 dari 124 laporan</span>
+                <div class="pagination">
+                    <button class="page-btn">&lsaquo; Sebelumnya</button>
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">Berikutnya &rsaquo;</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>

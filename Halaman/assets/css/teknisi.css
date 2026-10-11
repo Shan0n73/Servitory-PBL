@@ -1,0 +1,307 @@
+:root {
+    --primary-color: #2c3e50;
+    --bg-color: #f4f7f6;
+    --border-color: #dcdcdc;
+    --text-main: #333333;
+    --text-muted: #777777;
+    --card-bg: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 35px;
+    height: 35px;
+    background-color: #cccccc;
+    border-radius: 4px;
+}
+
+.brand-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #cccccc;
+    border-radius: 50%;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.user-role {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.btn-logout {
+    padding: 6px 14px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    background-color: #f0f0f0;
+}
+
+/* Sub Navbar (Tabs) */
+.sub-nav {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0 30px;
+}
+
+.sub-nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 25px;
+}
+
+.tab-item {
+    padding: 12px 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-item.active {
+    color: var(--text-main);
+    font-weight: bold;
+    border-bottom-color: var(--text-main);
+}
+
+/* Container Utama */
+.main-container {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 20px;
+}
+
+/* Section Block */
+.section-block {
+    margin-bottom: 35px;
+}
+
+.section-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-header-top h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.info-text {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Grid Kartu Laporan Masuk */
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.report-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ticket-id {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: bold;
+}
+
+.badge-baru {
+    font-size: 11px;
+    color: #333333;
+    background-color: #e6e6e6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+}
+
+.report-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.report-detail {
+    font-size: 12px;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.line-skeleton {
+    height: 8px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.line-skeleton.short {
+    width: 70%;
+    margin-top: 6px;
+    margin-bottom: 20px;
+}
+
+.card-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-terima, .btn-tolak {
+    padding: 7px 18px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+}
+
+.btn-terima {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+}
+
+.btn-terima:hover {
+    background-color: #111111;
+}
+
+.btn-tolak {
+    background-color: #ffffff;
+    color: var(--text-main);
+}
+
+.btn-tolak:hover {
+    background-color: #f0f0f0;
+}
+
+/* Penjadwalan Perbaikan Section */
+.scheduling-section {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.scheduling-content h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.workflow-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.workflow-label {
+    margin-right: 4px;
+}
+
+.status-box {
+    padding: 3px 8px;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 11px;
+}
+
+.btn-jadwal {
+    padding: 9px 16px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.btn-jadwal:hover {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teknisi / Dasbor - Servitory</title>
+    <link rel="stylesheet" href="../assets/css/teknisi.css">
+    <link rel="stylesheet" href="../assets/css/riwayat.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="logo-box">S</div>
+            <span class="brand-title">Servitory</span>
+        </div>
+        <div class="nav-user">
+            <div class="user-avatar"></div>
+            <div class="user-info">
+                <span class="user-name">Nama Teknisi</span>
+                <span class="user-role">Teknisi</span>
+            </div>
+            <button class="btn-logout" onclick="window.location.href='../Login.html'">Log Out</button>
+        </div>
+    </header>
+
+    <!-- Sub-Navbar / Tabs -->
+    <nav class="sub-nav">
+        <div class="sub-nav-container">
+            <a href="dasbor.html" class="tab-item active">Dasbor</a>
+            <a href="riwayat.html" class="tab-item">Riwayat Seluruh Laporan</a>
+        </div>
+    </nav>
+
+    <!-- Konten Utama Dashboard Teknisi -->
+    <main class="main-container">
+        
+        <!-- Bagian Laporan Masuk -->
+        <section class="section-block">
+            <div class="section-header-top">
+                <h2>Laporan Masuk</h2>
+                <span class="info-text">3 laporan baru menunggu verifikasi</span>
+            </div>
+
+            <div class="reports-grid">
+                <!-- Kartu Laporan 1 -->
+                <div class="report-card">
+                    <div class="card-top-row">
+                        <span class="ticket-id">TKT-0007</span>
+                        <span class="badge-baru">[Baru]</span>
+                    </div>
+                    <h3 class="report-title">Proyektor tidak menyala</h3>
+                    <p class="report-detail"><strong>Lokasi:</strong> RT 01</p>
+                    <p class="report-detail"><strong>Jenis:</strong> Peralatan rusak</p>
+                    <p class="report-detail"><strong>Tanggal:</strong> 14 Sep 2026</p>
+                    
+                    <div class="line-skeleton"></div>
+                    <div class="line-skeleton short"></div>
+
+                    <div class="card-actions">
+                        <button class="btn-terima">Terima</button>
+                        <button class="btn-tolak">Tolak</button>
+                    </div>
+                </div>
+
+                <!-- Kartu Laporan 2 -->
+                <div class="report-card">
+                    <div class="card-top-row">
+                        <span class="ticket-id">TKT-0008</span>
+                        <span class="badge-baru">[Baru]</span>
+                    </div>
+                    <h3 class="report-title">Kabel LAN hilang</h3>
+                    <p class="report-detail"><strong>Lokasi:</strong> LAI</p>
+                    <p class="report-detail"><strong>Jenis:</strong> Peralatan hilang</p>
+                    <p class="report-detail"><strong>Tanggal:</strong> 14 Sep 2026</p>
+                    
+                    <div class="line-skeleton"></div>
+                    <div class="line-skeleton short"></div>
+
+                    <div class="card-actions">
+                        <button class="btn-terima">Terima</button>
+                        <button class="btn-tolak">Tolak</button>
+                    </div>
+                </div>
+
+                <!-- Kartu Laporan 3 -->
+                <div class="report-card">
+                    <div class="card-top-row">
+                        <span class="ticket-id">TKT-0009</span>
+                        <span class="badge-baru">[Baru]</span>
+                    </div>
+                    <h3 class="report-title">AC bocor</h3>
+                    <p class="report-detail"><strong>Lokasi:</strong> LPR 2</p>
+                    <p class="report-detail"><strong>Jenis:</strong> Peralatan rusak</p>
+                    <p class="report-detail"><strong>Tanggal:</strong> 13 Sep 2026</p>
+                    
+                    <div class="line-skeleton"></div>
+                    <div class="line-skeleton short"></div>
+
+                    <div class="card-actions">
+                        <button class="btn-terima">Terima</button>
+                        <button class="btn-tolak">Tolak</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian Penjadwalan Perbaikan -->
+        <section class="section-block scheduling-section">
+            <div class="scheduling-content">
+                <h2>Penjadwalan Perbaikan</h2>
+                <div class="workflow-flow">
+                    <span class="workflow-label">Alur konfirmasi status:</span>
+                    <span class="status-box">[Diterima]</span> &rarr; 
+                    <span class="status-box">[Dijadwalkan]</span> &rarr; 
+                    <span class="status-box">[Selesai/Dikonfirmasi]</span>
+                </div>
+            </div>
+            <button class="btn-jadwal">+ Jadwalkan Perbaikan</button>
+        </section>
+
+    </main>
+
+</body>
+</html>

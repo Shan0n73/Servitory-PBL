@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sanitary</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="login-card">
+        <div class="logo-box">S</div>
+        
+        <h1 class="app-title">Sanitary</h1>
+        <p class="app-subtitle">Pengaduan Layanan Kebersihan</p>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username atau Email</label>
+                <input type="text" id="username" class="form-control" placeholder="Masukkan username/email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" placeholder="Masukkan password" required>
+            </div>
+
+            <!-- Pilihan Peran / Role (Pelapor atau Teknisi) -->
+            <div class="form-group">
+                <label for="role">Masuk Sebagai</label>
+                <select id="role" class="form-control" required>
+                    <option value="pelapor">Pelapor (Civitas Akademika)</option>
+                    <option value="teknisi">Teknisi</option>
+                </select>
+            </div>
+
+            <div class="extra-options">
+                <label>
+                    <input type="checkbox" id="remember"> Ingat Saya
+                </label>
+                <a href="#">Lupa Password?</a>
+            </div>
+
+            <button type="submit" class="btn-login">Masuk</button>
+        </form>
+
+        <div class="register-link">
+            Belum punya akun? <a href="#">Daftar sebagai Pelapor</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const selectedRole = document.getElementById('role').value;
+
+            // Mengarahkan berdasarkan pilihan role
+            if (selectedRole === 'teknisi') {
+                window.location.href = 'Teknisi/dasbor.html';
+            } else {
+                window.location.href = 'Pelapor/Dasbor.html';
+            }
+        });
+    </script>
+</body>
+</html>

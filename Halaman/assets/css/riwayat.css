@@ -1,0 +1,134 @@
+/* Styling Khusus Halaman Riwayat Seluruh Laporan */
+.page-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.page-header-row h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.btn-ekspor {
+    padding: 6px 14px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.btn-ekspor:hover {
+    background-color: #f0f0f0;
+}
+
+/* Filter Card */
+.filter-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.filter-input {
+    padding: 8px 10px;
+    font-size: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.filter-bottom-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.btn-reset {
+    padding: 8px 16px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-main);
+    cursor: pointer;
+}
+
+.btn-filter {
+    padding: 8px 16px;
+    background-color: #333333;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Pagination Footer */
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.page-btn {
+    padding: 5px 10px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--text-main);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.page-btn.active {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+    font-weight: bold;
+}
+
+.page-btn:hover:not(.active) {
+    background-color: #f0f0f0;
+}

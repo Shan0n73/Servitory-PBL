@@ -1,0 +1,155 @@
+/* Variabel Warna & Pengaturan Dasar */
+:root {
+    --primary-color: #2c3e50;
+    --button-hover: #1a252f;
+    --bg-color: #f4f7f6;
+    --border-color: #dcdcdc;
+    --text-main: #333333;
+    --text-muted: #777777;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kontainer Kartu Login */
+.login-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Bagian Logo & Judul */
+.logo-box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 auto 15px auto;
+    border-radius: 6px;
+}
+
+.app-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 4px;
+}
+
+.app-subtitle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+/* Grup Form Input */
+.form-group {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+}
+
+/* Opsi Tambahan (Ingat Saya & Lupa Sandi) */
+.extra-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.extra-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.extra-options a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol Masuk */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: var(--button-hover);
+}
+
+/* Tautan Pendaftaran */
+.register-link {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.register-link a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
