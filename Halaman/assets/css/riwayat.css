@@ -132,3 +132,74 @@
 .page-btn:hover:not(.active) {
     background-color: #f0f0f0;
 }
+
+.filter-card {
+    background: #fff;
+}
+
+.filter-input {
+    min-width: 0;
+    border-color: #e2e6ea;
+    border-radius: 7px;
+    color: #2b2b2b;
+}
+
+.filter-input:focus {
+    border-color: #8a501d;
+    box-shadow: 0 0 0 3px rgba(138, 80, 29, 0.12);
+}
+
+.btn-reset {
+    color: #462500;
+}
+
+.btn-filter {
+    border-color: #462500;
+    border-radius: 7px;
+    background: #462500;
+}
+
+.btn-filter:hover {
+    background: #321a00;
+}
+
+.table-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+    border-color: #e2e6ea;
+}
+
+.page-btn.active {
+    background: #462500;
+    border-color: #462500;
+}
+
+.btn-ekspor {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-ekspor:hover,
+.btn-reset:hover {
+    text-decoration: none;
+}
+
+.filter-bottom-row .btn-reset,
+.filter-bottom-row .btn-filter {
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.filter-input:focus-visible,
+.btn-filter:focus-visible,
+.btn-reset:focus-visible,
+.btn-ekspor:focus-visible,
+.page-btn:focus-visible {
+    outline: 3px solid rgba(209, 108, 0, 0.35);
+    outline-offset: 2px;
+}

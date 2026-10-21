@@ -1,11 +1,11 @@
 /* Variabel Warna & Pengaturan Dasar */
 :root {
-    --primary-color: #2c3e50;
-    --button-hover: #1a252f;
-    --bg-color: #f4f7f6;
-    --border-color: #dcdcdc;
-    --text-main: #333333;
-    --text-muted: #777777;
+    --primary-color: #462500;
+    --button-hover: #321a00;
+    --bg-color: #f5f6f8;
+    --border-color: #e2e6ea;
+    --text-main: #2b2b2b;
+    --text-muted: #667085;
 }
 
 * {
@@ -20,7 +20,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 24px 16px;
 }
 
 /* Kontainer Kartu Login */
@@ -28,10 +29,10 @@ body {
     background: #ffffff;
     padding: 40px 30px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
+    border-radius: 12px;
     width: 100%;
-    max-width: 380px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 420px;
+    box-shadow: 0 8px 28px rgba(32, 39, 48, 0.08);
     text-align: center;
 }
 
@@ -47,7 +48,7 @@ body {
     font-weight: bold;
     font-size: 20px;
     margin: 0 auto 15px auto;
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 .app-title {
@@ -55,6 +56,10 @@ body {
     font-weight: bold;
     color: var(--text-main);
     margin-bottom: 4px;
+}
+
+.brand-dot {
+    color: #d16c00;
 }
 
 .app-subtitle {
@@ -82,14 +87,14 @@ body {
     padding: 11px 12px;
     font-size: 14px;
     border: 1px solid var(--border-color);
-    border-radius: 5px;
+    border-radius: 7px;
     outline: none;
     transition: border-color 0.2s;
 }
 
 .form-control:focus {
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+    box-shadow: 0 0 0 3px rgba(70, 37, 0, 0.12);
 }
 
 /* Opsi Tambahan (Ingat Saya & Lupa Sandi) */
@@ -125,11 +130,19 @@ body {
     background-color: var(--primary-color);
     color: #ffffff;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(209, 108, 0, 0.35);
+    outline-offset: 2px;
 }
 
 .btn-login:hover {
@@ -153,3 +166,31 @@ body {
     text-decoration: underline;
 }
 
+.form-message {
+    margin-bottom: 18px;
+    padding: 11px 13px;
+    border: 1px solid;
+    border-radius: 7px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.form-message-error {
+    border-color: #f1b8b8;
+    background: #fff1f1;
+    color: #9b2525;
+}
+
+.form-message-success {
+    border-color: #b7dfc9;
+    background: #eef9f2;
+    color: #17683f;
+}
+
+.form-message ul {
+    padding-left: 17px;
+}
+
+.form-message li + li {
+    margin-top: 4px;
+}
