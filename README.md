@@ -25,5 +25,28 @@ dibuat lewat `Halaman/sql/03_seed_teknisi_dummy.sql`. Akun `teknisi01` sampai
 `teknisi10` memakai password demo `Teknisi123!`; ganti password sebelum
 menggunakan aplikasi di luar lingkungan lokal.
 
-Konfigurasi koneksi PHP ada di `Halaman/includes/koneksi.php`. Sesuaikan host, port,
-username, dan password dengan konfigurasi PostgreSQL lokal Anda.
+Koneksi PHP menggunakan PDO PostgreSQL dan dikonfigurasi melalui environment
+server PHP:
+
+| Environment variable | Default lokal |
+| --- | --- |
+| `SERVITORY_DB_HOST` | `localhost` |
+| `SERVITORY_DB_PORT` | `5432` |
+| `SERVITORY_DB_NAME` | `servitory` |
+| `SERVITORY_DB_USER` | `postgres` |
+| `SERVITORY_DB_PASSWORD` | `postgres` |
+
+Atur variabel tersebut di environment yang digunakan server PHP sebelum
+menjalankan aplikasi. Contoh untuk PowerShell:
+
+```powershell
+$env:SERVITORY_DB_HOST = "localhost"
+$env:SERVITORY_DB_PORT = "5432"
+$env:SERVITORY_DB_NAME = "servitory"
+$env:SERVITORY_DB_USER = "postgres"
+$env:SERVITORY_DB_PASSWORD = "password-postgres-Anda"
+```
+
+Nilai default hanya untuk pengembangan lokal; gunakan password yang kuat dan
+jangan gunakan kredensial default di lingkungan produksi. Jika koneksi gagal,
+detail teknis dicatat di log server PHP dan aplikasi menampilkan pesan umum.
