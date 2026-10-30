@@ -49,7 +49,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
                 'role' => 'pelapor',
             ]);
 
-            header('Location: ../Login.php?registered=1');
+            header('Location: ../Login/index.php?registered=1');
             exit;
         } catch (PDOException $e) {
             if ($e->getCode() === '23505') {
@@ -122,7 +122,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
         </form>
 
         <div class="register-link">
-            Sudah punya akun? <a href="../Login.php">Masuk</a>
+            Sudah punya akun? <a href="../Login/index.php">Masuk</a>
         </div>
     </main>
 </body>

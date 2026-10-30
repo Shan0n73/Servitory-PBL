@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/auth.php';
 
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'POST') {
-    header('Location: Login.php');
+    header('Location: index.php');
     exit;
 }
 
@@ -15,5 +15,5 @@ if (ini_get('session.use_cookies')) {
 }
 
 session_destroy();
-header('Location: Login.php');
+header('Location: index.php');
 exit;

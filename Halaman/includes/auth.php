@@ -24,7 +24,7 @@ function verifyCsrfToken(): void
 function requireRole(string $role): void
 {
     if (($_SESSION['user_role'] ?? null) !== $role) {
-        header('Location: ../Login.php');
+        header('Location: ../Login/index.php');
         exit;
     }
 }
